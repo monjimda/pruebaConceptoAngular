@@ -1,0 +1,132 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+/* HTML5 display-role reset for older browsers */
+
+/* Comunes a las vistas */
+header #cabecera {
+  max-height: 100%;
+  min-height: 100%;
+  display: block;
+  margin: auto; 
+  box-shadow: 2px 2px 2px 2px #807A28;}
+
+.inTable{
+  display: inline-table;
+}
+
+#contenedorVistas {
+  background: #F7F2A8; 
+  overflow: auto;
+  overflow-x: hidden;
+  height: 900px; }
+
+.letraPequenna {
+  background: #000000; 
+  font: bold 60% monospace;
+  color: white;}
+
+.estiloTDOscuro{
+  background: #D3D07B;
+  border-bottom: 1px solid red; 
+  width: 200px;
+  margin-top: 15px;
+  margin-left: 15px;}
+
+.tablaMargenIzq{
+  margin-left: 15px;}
+
+ md-toast.md-default-theme .md-toast-content, md-toast .md-toast-content {
+  background: #B2190A; }
+
+.md-button  {
+  background: #B2190A; }
+
+.boton{
+  width: 7%;
+  height: auto;
+  overflow: hidden;
+  background: #B2190A;
+  box-shadow: 1px 1px 1px 1px #777; }
+
+#opciones {
+  width: 10%;
+  border-radius: 0 0 20px 0;
+  }
+
+.ng-scope.layout-sm-column.layout-row{
+background: #F7F2A8; !important}
+
+.textoHipervinculo {
+  color: #B2190A;
+  text-decoration: none; }
+
+.textoHipervinculo:hover {
+  color: #000000;
+  text-decoration: none;
+  width: 100%; }
+
+.listado{
+ display: block; }
+
+.marginTop7prc{
+  margin-top: 7%; }
+
+.fuenteNegra{
+  color: black; !important }
+
+/* creador de pizzas */
+
+.opcionesLadoIzquierdo {
+  width: 400px;
+  height: 50px;
+  margin-top: 15px;
+  margin-left: 15px;}
+
+.opcionesLadoDerecho {
+  width: 400px;
+  height: 50px;
+  margin-top: 15px;
+  margin-left: 40%;}
+
+.ingredientesLadoIzquierdo {
+  width: 300px;
+  height: 30px;
+  margin-top: 15px;
+  margin-left: 15px;}
+
+ingredientesLadoDerecho {
+  width: 300px;
+  height: 30px;
+  margin-top: 15px;
+  margin-left: 40%;
+}
+
+.contenedorT300 {
+  width: 300px;}
+
+ span {
+  color: black; }
+
+ 

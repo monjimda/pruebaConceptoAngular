@@ -1,0 +1,50 @@
+<!DOCTYPE>
+<html lang="es" ng-app="creadorPizzas" class="no-js" > 
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Creador de Pizzas!!!</title>
+        
+        <!-- Hojas de estilos-->
+        <link rel="stylesheet" href="/css/angular-material.css"/>
+        <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/style.css" />
+       
+	</head>
+	<body>
+		<header>
+            <img id="cabecera" src="imagenes/cabecera.jpg"/>
+        </header>
+        <div layout layout-sm="column" ng-include="'./modulos/menu/menu.html'"></div>
+        <div id="contenedorVistas" ng-view>            
+		</div>
+        <footer>
+            <p class="letraPequenna">Prueba concepto AngularJs by David Monco Jimenez</p>
+        </footer>  
+        
+        <!--Librerias JS-->
+        <script src="js/min/angular.min.js"></script>
+        <script src="js/min/angular-animate.min.js"></script>
+        <script src="js/min/angular-aria.min.js"></script>
+        <script src="js/min/angular-messages.min.js"></script>
+        <script src="js/min/angular-route.min.js"></script>
+        <script src="js/min/angular-material.min.js"></script>
+        <script src="js/min/ui-bootstrap-tpls-0.13.0.min.js"></script>
+        <script src="js/min/angular-sanitize.min.js"></script>
+        
+        
+		<!--JS Propios-->
+        <script src="utils.js"></script>
+        <script src="services.js"></script>
+		<script src="app.js"></script>    
+		<script src="config.js"></script>        
+        <script src="modulos/creadorPizza/controladorCreadorPizza.js"></script>
+        <script src="modulos/modificacionPizza/controladorModificacionPizza.js"></script>
+        <script src="modulos/eliminacionPizza/controladorEliminacionPizza.js"></script>
+        <script src="modulos/catalogoPizza/controladorCatalogoPizza.js"></script>
+		
+	</body>
+</html> 

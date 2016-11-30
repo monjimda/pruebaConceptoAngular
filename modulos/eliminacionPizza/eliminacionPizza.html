@@ -1,0 +1,41 @@
+<div class="marginTop7prc">  
+    
+    <div class="inTable">
+        <!-- Listado pizzas-->
+            <label class="fuenteNegra opcionesLadoIzquierdo">Pizzas :</label>
+            <table class="tablaMargenIzq">
+                <tr ng-repeat="pizza in pizzas">
+                <td class="estiloTDOscuro" ng-click="mostrar(pizza)">{{ pizza.nombre }}</td>
+                <td><button  ng-click="remove($index)"> - </button></td>
+                </tr>
+            </table>
+    </div>
+    <div class="inTable">
+        <!-- Nombre de la pizza-->
+            <div class="opcionesLadoIzquierdo" ng-show="seleccionado">
+                <md-input-container title="Nombre de la pizza" class="contenedorT300"> 
+                    Nombre :<input name="nombrePizza" min="1" ng-model="pizza.nombre" ng-disabled=true>
+                </md-input-container>
+            </div>
+        <!-- Tipo de masa -->
+            <div class="opcionesLadoIzquierdo" ng-show="seleccionado">
+                <md-input-container title="Tipo de masa" class="contenedorT300"> 
+                    Tipo de masa :<input name="tipoMasa" min="1" ng-model="pizza.tipoMasa" ng-disabled=true />
+                </md-input-container>
+            </div>
+        <!-- Ingredientes -->
+            <div ng-show="seleccionado" class="opcionesLadoIzquierdo">
+                <md-input-container class="contenedorT300"> 
+                    Ingredientes :
+                </md-input-container>
+                <md-input-container ng-repeat="ingrediente in pizza.ingredientes track by $index" class="contenedorT300">
+                    -{{pizza.ingredientes[$index]}}
+                </md-input-container>
+            </div>
+    </div>
+</div>
+ 
+          
+        
+
+

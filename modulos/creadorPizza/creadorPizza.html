@@ -1,0 +1,35 @@
+<div class="marginTop7prc">  
+    
+        <!-- Nombre de la pizza-->
+            <div class="opcionesLadoIzquierdo">
+                <md-input-container title="Nombre de la pizza" class="contenedorT300"> 
+                    <label class="fuenteNegra">Escribe un nombre unico para tu creacion!</label>
+                    <input name="nombrePizza" min="1" tabindex="1" ng-model="pizza.nombre" ng-required="true"/>
+                </md-input-container>
+            </div>
+        <!-- Tipo de masa -->
+            <div class="opcionesLadoIzquierdo">
+                <md-input-container title="Tipo de masa" class="contenedorT300">
+                    <label class="fuenteNegra">Escoge masa</label>
+                    <md-select class="fuenteNegra" name="tipoMasa" tabindex="2" ng-model="pizza.tipoMasa" ng-required="true">
+                        <md-option ng-value="masa" data-ng-repeat="masa in tipoMasa">
+                            {{masa}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+        <!-- Ingredientes -->
+            <div  ng-repeat="ingrediente in pizza.ingredientes track by $index">
+                <input class="ingredientesLadoIzquierdo" type="text" ng-model="pizza.ingredientes[$index]" name="" placeholder="Nuevo Ingrediente" tabindex="3" >
+                <button  ng-click="removeingrediente($index)"> - </button>
+            </div>
+            <button class="ingredientesLadoIzquierdo" ng-click="addingrediente()" tabindex="4">Añadir Ingrediente</button>
+       
+        <md-button class="boton" ng-click="guardar()" tabindex="5">Guardar</md-button>
+    
+</div>
+ 
+          
+        
+
+

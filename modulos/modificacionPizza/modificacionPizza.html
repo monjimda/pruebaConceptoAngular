@@ -1,0 +1,48 @@
+<div class="marginTop7prc">  
+    
+   <div class="inTable">
+        <!-- Listado pizzas-->
+            <label class="fuenteNegra opcionesLadoIzquierdo">Pizzas :</label>
+            <table class="tablaMargenIzq">
+                <tr ng-repeat="pizza in pizzas">
+                <td class="estiloTDOscuro" ng-click="mostrar(pizza)">{{ pizza.nombre }}</td>
+                </tr>
+            </table>
+    </div>
+    <div class="inTable">
+        <!-- Nombre de la pizza-->
+            <div class="opcionesLadoIzquierdo" ng-show="seleccionado">
+                <md-input-container title="Nombre de la pizza" class="contenedorT300"> 
+                    <label class="fuenteNegra">Nombre</label>
+                    <input name="nombrePizza" min="1" tabindex="1" ng-model="pizza.nombre" ng-required="true"/>
+                </md-input-container>
+            </div>
+        <!-- Tipo de masa -->
+            <div class="opcionesLadoIzquierdo" ng-show="seleccionado">
+                <md-input-container title="Tipo de masa" class="contenedorT300">
+                    <label class="fuenteNegra">Masa</label>
+                    <md-select class="fuenteNegra" name="tipoMasa" tabindex="2" ng-model="pizza.tipoMasa" ng-required="true">
+                        <md-option ng-value="masa" data-ng-repeat="masa in tipoMasa">
+                            {{masa}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+        <!-- Ingredientes -->
+            <div  ng-repeat="ingrediente in pizza.ingredientes track by $index" ng-show="seleccionado">
+                <input class="ingredientesLadoIzquierdo" type="text" ng-model="pizza.ingredientes[$index]" name="" placeholder="Ingredientes" tabindex="3" >
+                <button  ng-click="removeingrediente($index)"> - </button>
+            </div>
+            <button class="ingredientesLadoIzquierdo" ng-click="addingrediente()" tabindex="4" ng-show="seleccionado">Añadir Ingrediente</button>
+       
+            <md-button class="boton" ng-click="modificar()" tabindex="5" ng-show="seleccionado">Guardar</md-button>
+    </div>
+    
+    
+    
+</div>
+ 
+          
+        
+
+
